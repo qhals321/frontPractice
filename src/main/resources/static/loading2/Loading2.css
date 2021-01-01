@@ -1,0 +1,56 @@
+body {
+    line-height: 1.5em;
+    margin: 0;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loading {
+    height: 100px;
+    width: 100px;
+    position: relative;
+}
+
+.loading span {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    position: absolute;
+    animation: loading linear 1s infinite;
+}
+
+.loading span:nth-child(1) {
+    animation-delay: 0s;
+}
+.loading span:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes loading {
+    0%, 100% {
+        left: 0;
+        top: 0;
+        background-color: crimson;
+    }
+
+    25% {
+        left: calc(100% - 20px);
+        top: 0;
+        background-color: gold;
+    }
+
+    50% {
+        left: calc(100% - 20px);
+        top: calc(100% - 20px);
+        background-color: lightblue;
+    }
+
+    75% {
+        left: 0;
+        top: calc(100% - 20px);
+        background-color: lightslategrey;
+    }
+}
