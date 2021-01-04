@@ -1,0 +1,40 @@
+body {
+    background-color: lightblue;
+    margin: 0;
+}
+
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+.nav a {
+    display: block;
+    font-size: 40px;
+    margin: 15px 200px;
+    transition: 0.2s;
+}
+
+.nav:hover a {
+    opacity: 0.5;
+}
+
+.nav a:hover {
+    opacity: 1;
+}
+
+.nav a:before {
+    content: '>';
+    opacity: 0;
+    transition: inherit;
+}
+
+.nav a:hover:before {
+    opacity: 1;
+}
